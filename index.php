@@ -9,8 +9,6 @@ for ($i=0; $i<count($pieces);$i++) {
 
 }
 
-echo count($arr1);
-
 
 
 echo "<pre>";
