@@ -25,11 +25,11 @@ ini_set('error_reporting', E_ALL);
 
 $text= "стеклянный оловянный деревянный стальной обычный солнечный солнечная сулугуни солнечная солнечное красивый";
 $pieces = explode(" ", $text);
-foreach ($pieces as $key=>$pie){
+foreach ($pieces as $pie){
 
 
     $obj= new Word($pie);
-    if ($obj->isAdjactive())  $rez = $pie;
+    if ($obj->isAdjactive())  $rez[] = $obj;
 }
 
 
