@@ -27,13 +27,14 @@ $text= "стеклянный оловянный деревянный сталь�
 $pieces = explode(" ", $text);
 foreach ($pieces as $key=>$pie){
 
-    $obj= new Word($pie[$key]);
-    $obj->isAdjactive();
+
+    $obj= new Word($pie);
+    if ($obj->isAdjactive())  $rez = $pie;
 }
 
 
 
  echo"<pre>";
- echo var_dump($obj);
+ echo var_dump($rez);
 
 ?>
