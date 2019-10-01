@@ -15,7 +15,7 @@ ini_set('error_reporting', E_ALL);
 
      public function isAdjactive(){
 
-         if(preg_match('/.*(ный$)|.*(ное$)|.*(ная$)|.*(ной$)/', $this->text)) return true;
+         if(preg_match('/.*(ный$)|.*(ное$)|.*(ная$)|.*(ной$).*(вый$).*(ное$)/', $this->text)) return true;
          return false;
      }
 
@@ -23,7 +23,7 @@ ini_set('error_reporting', E_ALL);
 
  }
 
-$text= "стеклянный оловянный деревянный стальной обычный солнечный солнечная сулугуни солнечная солнечное красивый";
+$text= "стеклянный оловянный деревянный стальной обычный солнечный солнечная солнечная солнечная солнечное красивый";
 $pieces = explode(" ", $text);
 $rez[] =null;
 foreach ($pieces as $pie){
