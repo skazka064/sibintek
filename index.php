@@ -23,10 +23,15 @@ ini_set('error_reporting', E_ALL);
 
  }
 
+$text= "стеклянный оловянный деревянный стальной обычный солнечный солнечная сулугуни солнечная солнечное красивый";
+$pieces = explode(" ", $text);
+foreach ($pieces as $key=>$pie){
+
+    $obj= new Word($pie[$key]);
+    $obj->isAdjactive();
+}
 
 
-$obj= new Word("красивый");
-$obj->isAdjactive();
 
  echo"<pre>";
  echo var_dump($obj);
