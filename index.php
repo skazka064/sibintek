@@ -23,7 +23,10 @@ ini_set('error_reporting', E_ALL);
 
  }
 
+
+
 $obj= new Word("красивый");
+$obj->isAdjactive();
 
  echo"<pre>";
  echo var_dump($obj);
