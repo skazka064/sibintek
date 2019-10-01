@@ -25,13 +25,13 @@ ini_set('error_reporting', E_ALL);
 
 $text= "веселый довольный прекрасный стальной позитивный позитивный солнечный солнечная солнечное красивый";
 $pieces = explode(" ", $text);
-$rez[] =null;
+$rez[] =[];
 foreach ($pieces as $pie){
 
 
     $obj= new Word($pie);
 
-    if (($obj->isAdjactive()) && (!in_array($obj, $rez)))  $rez[] = $obj;
+    if ($obj->isAdjactive() && !in_array($obj, $rez))  $rez[] = $obj;
 }
 
 
